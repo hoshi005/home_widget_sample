@@ -1,0 +1,15 @@
+document:
+  - changed-files:
+    - any-glob-to-any-file: '*'
+
+flutter:
+  - changed-files:
+    - any-glob-to-any-file: 'lib/**/*'
+
+ios:
+  - changed-files:
+    - any-glob-to-any-file: 'ios/**/*'
+
+android:
+  - changed-files:
+    - any-glob-to-any-file: 'android/**/*'
