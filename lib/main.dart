@@ -12,11 +12,26 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: _themeData(Brightness.light),
+      darkTheme: _themeData(Brightness.dark),
       home: const HomePageWidget(),
     );
   }
+}
+
+const pinkColor = Color(0xFF67A5DA);
+const lightTextColor = Color(0xFFFFFFFF);
+const bgColor = Color(0xFFFDFDFB);
+
+ThemeData _themeData(Brightness brightness) {
+  return ThemeData(
+    brightness: brightness,
+    // colorScheme: colorScheme,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: pinkColor,
+      foregroundColor: lightTextColor,
+    ),
+    useMaterial3: true,
+    scaffoldBackgroundColor: bgColor,
+  );
 }
