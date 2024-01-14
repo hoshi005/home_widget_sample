@@ -16,6 +16,7 @@ class HomePageWidget extends StatelessWidget {
             HomeWidget.updateWidget(
               name: 'MyAppWidgetProvider',
               androidName: 'MyAppWidgetProvider',
+              iOSName: 'HomeWidgetSampleExtension',
             );
           },
           child: const Text('Update Widget'),
